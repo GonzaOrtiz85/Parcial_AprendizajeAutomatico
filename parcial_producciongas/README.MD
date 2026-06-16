@@ -1,15 +1,15 @@
 # Proyecto parcial de Aprendizaje Automático
 
-## Estimación de la producción mensual de gas convencional en provincias patagónicas
+## Estimación de la producción mensual de gas convencional en Tierra del Fuego y provincias patagónicas
 
 **Alumno:** Gonzalo Ortiz
 **Materia:** Aprendizaje Automático
-**Proyecto:** Trabajo integrador parcial
+**Proyecto:** Trabajo para parcial
 
-**Documentación del proyecto**
-- [Formulación del problema](reports/formulacion_del_problema.md)
-- [Descripción del dataset](reports/descripcion_del_dataset.md)
-- [Modelo y resultados](reports/modelo_y_resultados.md)
+**Reportes claves del proyecto**
+- Formulación del problema: reports/formulacion_del_problema.md
+- Descripción del dataset: reports/descripcion_del_dataset.md
+- Modelo y resultados: reports/modelo_y_resultados.md
 
 ---
 
@@ -139,9 +139,9 @@ Incluye:
 * Métricas previstas
 * Alcance inicial del trabajo
 
-Archivo sugerido:
+Reporte sugerido:
 
-`reports/entrega_1_descripcion_objetivo.pdf`
+`reports/formulacion_objetivo.md`
 
 ---
 
@@ -164,7 +164,7 @@ Incluye:
 
 Archivo sugerido:
 
-`reports/entrega_2_dataset_origen.pdf`
+`reports/descripcion_dataset_origen.md`
 
 ---
 
@@ -178,14 +178,15 @@ parcial_producciongas/
 │   │   └── dataset_original.csv
 │   │
 │   └── processed/
-│       └── produccion_gas_patagonia_ml.csv
+│       └── produccin-gas-sesco-tight-y-shale-captulo-iv-por-provincia.csv
 │
 ├── notebooks/
-│   └── 01_exploracion_dataset_gas.ipynb
+│   └── parcial_producciongas.ipynb
 │
 ├── reports/
-│   ├── entrega_1_descripcion_objetivo.pdf
-│   └── entrega_2_dataset_origen.pdf
+│   ├── descripcion_dataset_origen.md
+│   ├── formulacion_objetivo.md
+│   └── modelos_y_resultados.md
 │
 ├── src/
 │
@@ -204,11 +205,11 @@ parcial_producciongas/
 * pandas
 * scikit-learn
 * GitHub
-* Datos Argentina
+* Sitio Datos Argentina
 
 ---
 
-## Próximos pasos
+## tercera entrega:
 
 En la siguiente etapa del proyecto se avanzará con:
 
@@ -222,4 +223,4 @@ En la siguiente etapa del proyecto se avanzará con:
 
 * Datos Argentina. Producción de Petróleo y Gas SESCO.
 * Secretaría de Energía de la Nación.
-* Programa de la materia Aprendizaje Automático 2026.
+* Material bibliografico y Programa de la materia Aprendizaje Automático 2026.
