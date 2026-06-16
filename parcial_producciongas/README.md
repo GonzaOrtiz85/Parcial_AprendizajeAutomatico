@@ -5,6 +5,7 @@
 **Alumno:** Gonzalo Ortiz
 **Materia:** Aprendizaje Automático
 **Proyecto:** Trabajo integrador parcial
+
 **Documentación del proyecto**
 - [Formulación del problema](reports/formulacion_del_problema.md)
 - [Descripción del dataset](reports/descripcion_del_dataset.md)
