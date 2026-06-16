@@ -1,11 +1,11 @@
 # Modelo y análisis de resultados
 
-**Proyecto:** Estimación de la producción mensual de gas convencional en provincias patagónicas
+**Proyecto:** Estimación de la producción mensual de gas convencional en Tierra del Fuego y provincias patagónicas
 
 
 ## 1. Continuidad del proyecto
 
-Este documento continúa el trabajo desarrollado en las etapas anteriores del proyecto.
+Este documento continúa el trabajo desarrollado en las 2 etapas anteriores del proyecto.
 
 En la primera parte se formuló el problema: estimar la producción mensual de gas convencional a partir de datos históricos.
 
@@ -43,7 +43,7 @@ Las columnas originales son:
 
 ## 3. Recorte aplicado
 
-Para el desarrollo del modelo se seleccionaron únicamente los registros correspondientes a producción convencional de gas.
+Para el desarrollo del modelo se seleccionron únicamente los registros correspondientes a producción convencional de gas.
 
 Además, se trabajó con provincias patagónicas productoras:
 
@@ -98,7 +98,7 @@ Esta variable representa la producción mensual de gas convencional.
 
 ## 5. Análisis exploratorio de datos
 
-El análisis exploratorio permitió observar diferencias importantes entre las provincias incluidas en el proyecto.
+El análisis exploratorio permitió observar diferncias importantes entre las provincias incluidas en el proyecto.
 
 En primer lugar, Neuquén aparece como la provincia con mayor producción promedio mensual de gas convencional dentro del recorte analizado.
 
@@ -134,7 +134,7 @@ No se utilizaron datos futuros para construir las variables predictoras.
 
 ## 7. Separación entre entrenamiento y prueba
 
-Como el dataset tiene una dimensión temporal, la separación entre entrenamiento y prueba se realizó respetando el orden de los meses.
+Como el dataset tiene una dimensión temporal, la separación entre entrenaminto y prueba se realizó respetando el orden de los meses.
 
 Se utilizó aproximadamente el 80% inicial de los datos para entrenamiento y el 20% final para prueba.
 
@@ -159,7 +159,7 @@ Se entrenaron dos modelos de aprendizaje supervisado orientados a regresión.
 
 ### Regresión lineal
 
-La regresión lineal fue utilizada como modelo principal. Este modelo permite estimar una variable numérica a partir de una combinación de variables predictoras.
+La regresión lineal fue  utilizada como modelo principal. Este modelo permite estimar una variable numérica a partir de una combinación de variables predictoras.
 
 ### Árbol de decisión para regresión
 
