@@ -5,7 +5,10 @@
 **Alumno:** Gonzalo Ortiz
 **Materia:** Aprendizaje Automático
 **Proyecto:** Trabajo integrador parcial
-**Entregas incluidas:** Entrega 1 y Entrega 2
+**Documentación del proyecto**
+- [Formulación del problema](reports/formulacion_del_problema.md)
+- [Descripción del dataset](reports/descripcion_del_dataset.md)
+- [Modelo y resultados](reports/modelo_y_resultados.md)
 
 ---
 
