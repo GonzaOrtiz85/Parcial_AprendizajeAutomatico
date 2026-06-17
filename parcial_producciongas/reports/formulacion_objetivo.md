@@ -1,5 +1,5 @@
 Título 
-“Estimación de la producción mensual de gas convencional en Tierra del Fuego mediante modelos de regresión supervisada”
+“Estimación de la producción mensual de gas convencional en Tierra del Fuego y Patagonia mediante modelos de regresión”
 
 ____________________________________
 Tema del proyecto
