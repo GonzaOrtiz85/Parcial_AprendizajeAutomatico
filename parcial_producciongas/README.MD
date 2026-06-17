@@ -1,11 +1,11 @@
 ## Estimación de la producción mensual de gas convencional en Tierra del Fuego y provincias patagónicas
 
-**Link del video presentación:** https://youtu.be/7qnsR92DdLY
-
 **Realizado por el alumno:** Gonzalo Ortiz
 **Docente**: Nicolas Caballero
 **Materia:** Aprendizaje Automático
 **Proyecto:** Proyecto parcial de Aprendizaje Automático
+
+**Link del video presentación:** https://youtu.be/7qnsR92DdLY
 
 **Reportes claves del proyecto**
 - Formulación del problema: reports/formulacion_del_problema.md
