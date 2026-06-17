@@ -125,6 +125,7 @@ Estas variables permiten que el modelo utilice información de meses anteriores 
 ---
 
 ## Entrega 1
+Archivo: formulacion_objetivo.md
 
 La Entrega 1 corresponde a la **descripción y formulación del objetivo del proyecto**.
 
@@ -140,13 +141,10 @@ Incluye:
 * Métricas previstas
 * Alcance inicial del trabajo
 
-Reporte sugerido:
-
-`reports/formulacion_objetivo.md`
-
 ---
 
 ## Entrega 2
+Archivo: `reports/descripcion_dataset_origen.md`
 
 La Entrega 2 corresponde a la **descripción del dataset y su origen**.
 
@@ -163,10 +161,15 @@ Incluye:
 * Dataset final preparado
 * Archivos incluidos en el repositorio
 
-Archivo sugerido:
+---
+## tercera entrega:
+Archivo: modelos_y_resultados.md
 
-`reports/descripcion_dataset_origen.md`
+En esta etapa del proyecto avanza con:
 
+* Entrenamiento de modelos de regresión
+* Evaluación con métricas como MAE, RMSE y R2
+* Análisis de resultados con foco en Tierra del Fuego
 ---
 
 ## Estructura del repositorio
@@ -207,16 +210,6 @@ parcial_producciongas/
 * scikit-learn
 * GitHub
 * Sitio Datos Argentina
-
----
-
-## tercera entrega:
-
-En esta etapa del proyecto avanza con:
-
-* Entrenamiento de modelos de regresión
-* Evaluación con métricas como MAE, RMSE y R2
-* Análisis de resultados con foco en Tierra del Fuego
 
 ---
 
