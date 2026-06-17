@@ -212,7 +212,7 @@ parcial_producciongas/
 
 ## tercera entrega:
 
-En la siguiente etapa del proyecto se avanzará con:
+En esta etapa del proyecto avanza con:
 
 * Entrenamiento de modelos de regresión
 * Evaluación con métricas como MAE, RMSE y R2
