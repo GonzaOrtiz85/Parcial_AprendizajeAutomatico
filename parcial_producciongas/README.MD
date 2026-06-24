@@ -6,12 +6,6 @@
 **Proyecto:** Proyecto parcial de Aprendizaje Automático
 
 **Link del video presentación:** 
-
-**Reportes claves del proyecto**
-- Formulación del problema: reports/formulacion_del_problema.md
-- Descripción del dataset: reports/descripcion_del_dataset.md
-- Modelo y resultados: reports/modelo_y_resultados.md
-
 ---
 
 ## Descripción del proyecto
