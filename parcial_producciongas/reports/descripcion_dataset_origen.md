@@ -27,9 +27,21 @@ Relevancia del problema
 
 El problema se enmarca en el análisis de la producción mensual de gas convencional en Tierra del Fuego y otras provincias patagónicas productoras. La producción de gas es un dato relevante porque forma parte de la matriz energética nacional y permite observar la evolución de una actividad estratégica para la región. En este contexto, estimar la producción mensual a partir de datos históricos puede aportar una primera aproximación para identificar tendencias, comparar comportamientos entre provincias y anticipar posibles variaciones. Por eso, el problema resulta adecuado para aplicar técnicas de Aprendizaje Automático, especialmente modelos de regresión, ya que el objetivo es predecir un valor numérico continuo, es decir la cantidad mensual de gas producido.
 
-## Objetivo general
+Objetivo general
 
 Desarrollar un modelo de Aprendizaje Automático que permita estimar la producción mensual de gas convencional en Tierra del Fuego y provincias patagónicas a partir de datos históricos de producción.
+
+Objetivos específicos
+
+-Analizar el dataset de producción de gas para identificar su estructura, variables principales, cantidad de registros y posibles valores faltantes.
+-Realizar un análisis exploratorio de datos para observar el comportamiento de la producción mensual de gas convencional en Tierra del Fuego y otras provincias patagónicas.
+-Filtrar y preparar los datos correspondientes a producción convencional de gas, seleccionando las provincias relevantes para el análisis.
+-Construir variables históricas de producción, como la producción del mes anterior, la producción de dos meses antes, el promedio de los tres meses previos y la variación mensual.
+-Entrenar modelos de Aprendizaje Automático supervisado para estimar la producción mensual de gas convencional.
+-Evaluar el desempeño de los modelos mediante métricas de regresión como MAE, RMSE y R2.
+-Comparar los resultados obtenidos entre la regresión lineal y el árbol de decisión para seleccionar el modelo con mejor rendimiento.
+-Interpretar los resultados del modelo y reconocer sus principales limitaciones para futuras mejoras.
+
 
 Descripción general del archivo original
 
