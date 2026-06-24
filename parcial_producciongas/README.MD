@@ -5,7 +5,7 @@
 **Materia:** Aprendizaje Automático
 **Proyecto:** Proyecto parcial de Aprendizaje Automático
 
-**Link del video presentación:** https://youtu.be/7qnsR92DdLY
+**Link del video presentación:** 
 
 **Reportes claves del proyecto**
 - Formulación del problema: reports/formulacion_del_problema.md
