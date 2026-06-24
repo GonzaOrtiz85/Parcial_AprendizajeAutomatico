@@ -4,7 +4,7 @@
 **Docente**: Nicolas Caballero
 **Materia:** Aprendizaje Automático
 
-**Link del video presentación:** 
+**Link del video presentación:** https://youtu.be/jutHVKb8vjk
 
 # Estimación de la producción mensual de gas convencional en Tierra del Fuego y Patagonia mediante modelos de regresión
 
