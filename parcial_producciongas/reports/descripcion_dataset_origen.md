@@ -6,8 +6,6 @@ Para el proyecto de Aprendizaje Automático se utilizará el dataset Producción
 Dentro de ese conjunto de datos, se trabajará con el recurso Producción gas SESCO más Tight y Shale capítulo IV por provincia, disponible en formato CSV.
 El objetivo del proyecto es estimar la producción mensual de gas convencional en provincias patagónicas, manteniendo a Tierra del Fuego como caso principal de análisis.
 
-En una primera formulación del proyecto se había previsto trabajar únicamente con los registros correspondientes a Tierra del Fuego. Sin embargo, durante la revisión del dataset se observó que ese recorte dejaba una cantidad limitada de registros para entrenar modelos de Aprendizaje Automático. Por ese motivo, se decidió reenfocar el trabajo hacia un recorte regional de provincias patagónicas productoras de gas convencional. 
-
 Origen del dataset
 
 El dataset proviene del portal Datos Argentina, que reúne datos abiertos publicados por organismos del Estado nacional.
@@ -130,24 +128,3 @@ Se ordenaron los datos por provincia, año y mes.
 Se construyeron variables históricas por provincia.
 Se eliminaron las filas sin datos suficientes generadas por los rezagos.
 Se generó un dataset final preparado para la etapa de modelado.
-
-Archivos incluidos en el repositorio Git
-
-Para esta entrega, el repositorio Git incluirá los siguientes archivos y carpetas.
-data/raw
-Contiene el archivo CSV original descargado desde Datos Argentina.
-data/processed
-Contiene el archivo procesado con el recorte patagónico y las variables históricas construidas.
-notebooks
-Contiene la notebook de Google Colab utilizada para cargar, revisar y preparar el dataset.
-reports
-Contiene el documento correspondiente a esta entrega.
-
-Conclusión de la entrega
-
-El dataset seleccionado es adecuado para continuar con el proyecto porque tiene origen oficial, formato CSV, frecuencia mensual, una variable objetivo numérica y datos suficientes para construir variables predictoras.
-El recorte aplicado permite trabajar con provincias patagónicas productoras de gas convencional, manteniendo a Tierra del Fuego como caso principal de análisis. Además, el preprocesamiento realizado transforma el archivo original en una base más adecuada para entrenar modelos de regresión en la siguiente etapa del proyecto.
-Referencias
-Datos Argentina. Producción de Petróleo y Gas SESCO. Secretaría de Energía de la Nación.
-Datos Argentina. Producción gas SESCO más Tight y Shale capítulo IV por provincia.
-Programa de la materia Aprendizaje Automático 2026.
