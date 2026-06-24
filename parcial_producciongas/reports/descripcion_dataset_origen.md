@@ -1,150 +1,166 @@
-Descripción del dataset y origen
+"Estimación de la producción mensual de gas convencional en Tierra del Fuego y provincias patagónicas"
 
-Dataset seleccionado
+(corresponde a la entrega 1)
 
-Para el proyecto de Aprendizaje Automático se utilizará el dataset Producción de Petróleo y Gas SESCO, publicado por la Secretaría de Energía en el portal Datos Argentina.
-Dentro de ese conjunto de datos, se trabajará con el recurso Producción gas SESCO más Tight y Shale capítulo IV por provincia, disponible en formato CSV.
-El objetivo del proyecto es estimar la producción mensual de gas convencional en provincias patagónicas, manteniendo a Tierra del Fuego como caso principal de análisis.
+## Descripción del proyecto
 
-Origen del dataset
+Este proyecto propone aplicar modelos de aprendizaje automático supervisado para estimar la producción mensual de gas convencional en Tierra del Fuego, Antártida e Islas del Atlántico Sur.
 
-El dataset proviene del portal Datos Argentina, que reúne datos abiertos publicados por organismos del Estado nacional.
-La información corresponde a la Secretaría de Energía y forma parte de los registros oficiales de producción de hidrocarburos del sistema SESCO.
-Fuente
-Datos Argentina
-Organismo responsable
-Secretaría de Energía de la Nación
-Dataset
-Producción de Petróleo y Gas SESCO
-Recurso utilizado
-Producción gas SESCO más Tight y Shale capítulo IV por provincia
-Formato
-CSV
-Fecha de adquisición
-3 de junio de 2026
+La idea central es trabajar con datos históricos oficiales de producción hidrocarburífera y analizar si algunas variables temporales, junto con valores de producción de meses anteriores, pueden servir para aproximar la producción de un mes determinado.
 
-Relevancia del problema
+El trabajo se enfoca en la producción convencional de gas, ya que en el caso de Tierra del Fuego los registros de shale gas y tight gas aparecen con valores en cero dentro del dataset seleccionado.
 
-El problema se enmarca en el análisis de la producción mensual de gas convencional en Tierra del Fuego y otras provincias patagónicas productoras. La producción de gas es un dato relevante porque forma parte de la matriz energética nacional y permite observar la evolución de una actividad estratégica para la región. En este contexto, estimar la producción mensual a partir de datos históricos puede aportar una primera aproximación para identificar tendencias, comparar comportamientos entre provincias y anticipar posibles variaciones. Por eso, el problema resulta adecuado para aplicar técnicas de Aprendizaje Automático, especialmente modelos de regresión, ya que el objetivo es predecir un valor numérico continuo, es decir la cantidad mensual de gas producido.
+## Contexto del problema
 
-Objetivo general
+Tierra del Fuego tiene una relación histórica con la producción de hidrocarburos. Dentro de esa actividad, el gas natural ocupa un lugar importante por la presencia de la Cuenca Austral y por el desarrollo de áreas de producción ubicadas tanto en tierra como en zonas offshore.
 
-Desarrollar un modelo de Aprendizaje Automático que permita estimar la producción mensual de gas convencional en Tierra del Fuego y provincias patagónicas a partir de datos históricos de producción.
+La producción de gas forma parte de una cadena productiva más amplia. Primero se encuentra la etapa de exploración y producción, donde las empresas operadoras trabajan sobre áreas o concesiones para extraer el recurso. Luego aparece el tratamiento del gas en plantas ubicadas principalmente en la zona norte de la isla y finalmente su transporte hacia el sistema nacional, mediante infraestructura conectada al Gasoducto San Martín.
 
-Objetivos específicos
+En Tierra del Fuego conviven operaciones onshore y offshore. Las primeras se desarrollan en tierra, mientras que las segundas se realizan costa afuera. Esta característica hace que la producción gasífera fueguina tenga una dimensión técnica, logística y económica importante.
 
--Analizar el dataset de producción de gas para identificar su estructura, variables principales, cantidad de registros y posibles valores faltantes.
--Realizar un análisis exploratorio de datos para observar el comportamiento de la producción mensual de gas convencional en Tierra del Fuego y otras provincias patagónicas.
--Filtrar y preparar los datos correspondientes a producción convencional de gas, seleccionando las provincias relevantes para el análisis.
--Construir variables históricas de producción, como la producción del mes anterior, la producción de dos meses antes, el promedio de los tres meses previos y la variación mensual.
--Entrenar modelos de Aprendizaje Automático supervisado para estimar la producción mensual de gas convencional.
--Evaluar el desempeño de los modelos mediante métricas de regresión como MAE, RMSE y R2.
--Comparar los resultados obtenidos entre la regresión lineal y el árbol de decisión para seleccionar el modelo con mejor rendimiento.
--Interpretar los resultados del modelo y reconocer sus principales limitaciones para futuras mejoras.
+Entre los actores privados con presencia en la producción fueguina aparecen empresas vinculadas a desarrollos de la Cuenca Marina Austral, como TotalEnergies, Harbour Energy y Pan American Energy. En los últimos años, el proyecto Fénix volvió a poner en agenda la producción offshore de gas natural frente a Tierra del Fuego.
 
+Para la provincia, la producción de gas tiene relevancia porque se vincula con regalías, empleo directo e indirecto, contratación de servicios, actividad portuaria, infraestructura energética y planificación económica. Para el país, también tiene importancia porque aporta al abastecimiento de gas natural dentro de la matriz energética argentina.
 
-Descripción general del archivo original
+Desde el punto de vista del aprendizaje automático, la producción mensual de gas convencional puede analizarse como una variable numérica observada a lo largo del tiempo. Esto permite formular un problema de regresión, ya que el objetivo no es clasificar casos, sino estimar un valor de producción.
 
-El archivo original contiene 7494 instancias y 6 columnas.
-La frecuencia de los datos es mensual.
-El período registrado va desde enero de 2009 hasta abril de 2026.
-Las columnas originales del dataset son las siguientes.
-anio
-mes
-indice_tiempo
-provincia
-concepto
-cantidad_mm3
+## Problema que se abordará
 
-Características del dataset
+El problema que se abordará es la estimación de la producción mensual de gas convencional en Tierra del Fuego a partir del comportamiento histórico de la propia serie de producción.
 
-A continuación se describen las columnas principales del archivo.
-anio
-Indica el año correspondiente al registro.
-mes
-Indica el mes correspondiente al registro, con valores numéricos del 1 al 12.
-indice_tiempo
-Representa el período temporal del registro. Permite ordenar los datos de manera cronológica.
-provincia
-Indica la provincia o jurisdicción asociada al dato de producción.
-concepto
-Indica el tipo de producción registrada. En el archivo aparecen Producción convencional, Shale gas y Tight gas.
-cantidad_mm3
-Indica la cantidad de gas producida, medida en millones de metros cúbicos. Esta será la variable objetivo del proyecto.
+La pregunta orientadora del proyecto es, ¿Es posible estimar la producción mensual de gas convencional en Tierra del Fuego utilizando variables temporales y valores históricos de producción?
 
-Tipos de datos
+## Relevancia del problema
 
-En la revisión inicial realizada en Google Colab, el dataset fue cargado correctamente con pandas.
-Las columnas anio y mes corresponden a variables numéricas enteras.
-La columna cantidad_mm3 corresponde a una variable numérica.
-Las columnas indice_tiempo, provincia y concepto corresponden a variables categóricas o de texto.
+El problema es relevante porque permite aplicar aprendizaje automático a un tema vinculado con la producción energética de Tierra del Fuego.
 
-Recorte aplicado
+Además, permite trabajar con una fuente oficial de datos. Esto evita construir una variable objetivo sintética o artificial. La producción mensual de gas convencional es un dato registrado, medible y comparable en el tiempo.
 
-Para preparar el dataset de acuerdo con el objetivo del proyecto, se aplicaron dos filtros principales.
-Primero, se seleccionó únicamente el concepto Producción convencional.
-Segundo, se seleccionaron provincias patagónicas productoras de gas.
-Las provincias incluidas en el recorte son las siguientes.
-Tierra del Fuego
-Santa Cruz
-Chubut
-Rio Negro
-Neuquén
-Este recorte permite trabajar con una base más amplia que si se utilizara únicamente Tierra del Fuego, pero mantiene el interés territorial del proyecto. Tierra del Fuego seguirá siendo el caso principal de análisis.
+El proyecto también permite analizar las posibilidades y limitaciones de los modelos de aprendizaje automático cuando se trabaja con datos reales. Si bien el dataset permite observar la producción mensual, no incluye todos los factores que pueden afectar esa producción, como precios, inversiones, decisiones empresariales, mantenimiento de instalaciones, entrada de nuevos pozos o cambios regulatorios.
 
-Dataset luego del recorte
+Por eso, el trabajo se enfocará en estimar la producción a partir de datos históricos, reconociendo esas limitaciones.
 
-Después de filtrar el concepto Producción convencional y seleccionar las provincias patagónicas, el dataset quedó conformado por 1040 registros.
-Luego se construyeron variables históricas por provincia y se eliminaron las filas que no tenían datos suficientes por el uso de rezagos.
-El dataset final preparado para la etapa de Machine Learning quedó conformado por 1025 instancias y 10 columnas.
-La distribución final por provincia quedó equilibrada.
-Chubut, 205 registros
-Neuquén, 205 registros
-Rio Negro, 205 registros
-Santa Cruz, 205 registros
-Tierra del Fuego, 205 registros
+## Dataset seleccionado
 
-Variables construidas durante el preprocesamiento
+La fuente utilizada será el dataset **Producción gas SESCO más Tight y Shale capítulo IV por provincia**, publicado en el portal Datos Argentina.
 
-Para adaptar el dataset a un problema de Aprendizaje Automático, se construyeron variables predictoras a partir de la producción de meses anteriores.
-Las variables construidas fueron las siguientes.
-produccion_mes_anterior
-produccion_dos_meses_antes
-promedio_3_meses
-variacion_mes_anterior
-Estas variables fueron calculadas por provincia. Esto es importante porque la producción anterior de Tierra del Fuego debe calcularse usando la serie de Tierra del Fuego, y no valores de otra provincia.
+El archivo se encuentra en formato CSV y contiene información oficial sobre producción de gas.
 
-Variable objetivo
+Las columnas principales del dataset son:
 
-La variable objetivo será cantidad_mm3.
-Esta variable representa la producción mensual de gas convencional medida en millones de metros cúbicos.
-Como se trata de una variable numérica continua, el proyecto corresponde a un problema de regresión.
+- `anio`
+- `mes`
+- `indice_tiempo`
+- `provincia`
+- `concepto`
+- `cantidad_mm3`
 
-Columnas del dataset final
+Para este proyecto se utilizarán los registros correspondientes a Tierra del Fuego y al concepto **Producción convencional**.
 
-Luego del preprocesamiento inicial, el dataset final quedó compuesto por las siguientes columnas.
-anio
-mes
-indice_tiempo
-provincia
-concepto
-cantidad_mm3
-produccion_mes_anterior
-produccion_dos_meses_antes
-promedio_3_meses
-variacion_mes_anterior
+La variable `cantidad_mm3` representa la producción mensual de gas medida en millones de metros cúbicos.
 
-Proceso de recopilación y preprocesamiento realizado
+## Tipo de problema
 
-El proceso realizado hasta esta entrega fue el siguiente.
-Se descargó el archivo CSV desde el portal Datos Argentina.
-Se cargó el archivo en Google Colab utilizando pandas.
-Se revisaron las dimensiones del archivo original.
-Se revisaron los nombres de columnas.
-Se identificaron los conceptos disponibles en la columna concepto.
-Se filtró el concepto Producción convencional.
-Se seleccionaron las provincias patagónicas productoras.
-Se ordenaron los datos por provincia, año y mes.
-Se construyeron variables históricas por provincia.
-Se eliminaron las filas sin datos suficientes generadas por los rezagos.
-Se generó un dataset final preparado para la etapa de modelado.
+El proyecto se plantea como un problema de **regresión**, porque la variable objetivo es numérica.
+
+El valor que se buscará estimar será la producción mensual de gas convencional en Tierra del Fuego.
+
+No se trata de un problema de clasificación, ya que el objetivo no es asignar categorías, sino predecir un valor continuo de producción.
+
+## Variable objetivo
+
+La variable objetivo será:
+
+- `cantidad_mm3`
+
+Esta columna representa la producción mensual de gas convencional medida en millones de metros cúbicos.
+
+El modelo intentará estimar esta variable a partir de información temporal y de valores históricos de producción.
+
+## Variables predictoras posibles
+
+Las variables predictoras iniciales estarán relacionadas con el comportamiento temporal de la producción.
+
+Entre ellas se podrán utilizar:
+
+- Año
+- Mes
+- Número de período
+- Producción del mes anterior
+- Producción de dos meses anteriores
+- Promedio de producción de los últimos tres meses
+- Variación respecto del mes anterior
+
+Estas variables podrán ajustarse durante la etapa de preprocesamiento, según la calidad de los datos y los resultados del análisis exploratorio.
+
+## Tratamiento inicial de los datos
+
+Para preparar el dataset se prevén los siguientes pasos:
+
+- Filtrar los registros correspondientes a Tierra del Fuego.
+- Seleccionar únicamente el concepto **Producción convencional**.
+- Ordenar los datos por año y mes.
+- Revisar valores faltantes o atípicos.
+- Crear variables temporales simples.
+- Crear variables históricas a partir de meses anteriores.
+- Separar datos de entrenamiento y prueba.
+- Evaluar el comportamiento de la serie mensual de producción.
+
+Un punto a revisar será el registro de abril de 2026, porque aparece con un valor muy inferior al de los meses previos. En el análisis exploratorio se deberá observar si se trata de un dato parcial, atípico o incompleto.
+
+## Modelos posibles
+
+Se trabajará con modelos supervisados de regresión vistos o relacionados con los contenidos de la materia.
+
+### Regresión lineal
+
+Será el modelo base. Servirá para observar si las variables predictoras permiten aproximar la producción mensual de gas convencional.
+
+### K vecinos más cercanos para regresión
+
+Este modelo permitirá estimar valores a partir de meses con características similares. Se relaciona con el contenido de KNN trabajado en la materia.
+
+### Árbol de decisión para regresión
+
+Este modelo permitirá construir reglas de decisión y captar relaciones que no necesariamente sean lineales.
+
+### Random Forest Regressor
+
+De manera opcional, se podrá incorporar un modelo de ensamble como comparación adicional. No será el modelo principal, sino una referencia para observar si mejora los resultados respecto de modelos más simples.
+
+## Métricas de evaluación previstas
+
+Al tratarse de un problema de regresión, se utilizarán métricas adecuadas para evaluar errores en valores numéricos.
+
+### MAE
+
+El error absoluto medio permite conocer el error promedio de predicción en la misma unidad de la producción.
+
+### RMSE
+
+La raíz del error cuadrático medio penaliza más los errores grandes, por lo que permite observar si el modelo comete errores importantes en algunos meses.
+
+### R2
+
+El coeficiente de determinación permite observar qué parte de la variación de la producción logra explicar el modelo.
+
+## Objetivo general
+
+Aplicar modelos de aprendizaje automático supervisado para estimar la producción mensual de gas convencional en Tierra del Fuego a partir de datos históricos oficiales.
+
+## Objetivos específicos
+
+- Describir el contexto productivo del gas natural en Tierra del Fuego.
+- Identificar una fuente oficial de datos sobre producción de gas.
+- Filtrar y preparar los registros correspondientes a Tierra del Fuego.
+- Explorar la evolución mensual de la producción mediante gráficos y medidas descriptivas.
+- Preparar el dataset mediante limpieza, selección de variables y creación de variables temporales.
+- Entrenar modelos de regresión utilizando Python y scikit-learn.
+- Evaluar los modelos mediante métricas como MAE, RMSE y R2.
+- Comparar los resultados obtenidos entre los modelos utilizados.
+- Elaborar conclusiones sobre el desempeño de los modelos y sus limitaciones.
+
+## Resultados esperados
+
+Se espera que los modelos puedan captar parte del comportamiento histórico de la producción mensual de gas convencional, especialmente a partir de la producción de meses anteriores y de variables temporales como mes y año.
+
