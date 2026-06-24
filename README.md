@@ -3,7 +3,6 @@
 **Realizado por el alumno:** Gonzalo Ortiz
 **Docente**: Nicolas Caballero
 **Materia:** Aprendizaje Automático
-**Proyecto:** Proyecto parcial de Aprendizaje Automático
 
 **Link del video presentación:** 
 
@@ -246,7 +245,7 @@ proyecto_gas/
 │   └── parcial_producciongas.ipynb
 │
 ├── reports/
-│   └── modelo_y_resultados.md
+│   └── informe_final_produccion_gas.md
 │
 reports
 │     └── informe_final_produccion_gas.md
