@@ -124,54 +124,6 @@ Estas variables permiten que el modelo utilice información de meses anteriores 
 
 ---
 
-## Entrega 1
-Archivo: formulacion_objetivo.md
-
-La Entrega 1 corresponde a la **descripción y formulación del objetivo del proyecto**.
-
-Incluye:
-
-* Tema del proyecto
-* Contexto del problema
-* Relevancia del tema
-* Tipo de problema
-* Variable objetivo
-* Variables predictoras posibles
-* Modelos posibles
-* Métricas previstas
-* Alcance inicial del trabajo
-
----
-
-## Entrega 2
-Archivo: `reports/descripcion_dataset_origen.md`
-
-La Entrega 2 corresponde a la **descripción del dataset y su origen**.
-
-Incluye:
-
-* Origen del dataset
-* Fuente de datos
-* Descripción del archivo original
-* Cantidad de instancias
-* Características y columnas
-* Tipos de datos
-* Recorte aplicado
-* Preprocesamiento inicial
-* Dataset final preparado
-* Archivos incluidos en el repositorio
-
----
-## tercera entrega:
-Archivo: modelos_y_resultados.md
-
-En esta etapa del proyecto avanza con:
-
-* Entrenamiento de modelos de regresión
-* Evaluación con métricas como MAE, RMSE y R2
-* Análisis de resultados con foco en Tierra del Fuego
----
-
 ## Estructura del repositorio
 
 ```text
