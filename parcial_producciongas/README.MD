@@ -14,7 +14,7 @@
 
 ---
 
-## Descripción general del proyecto
+## Descripción del proyecto
 
 Este proyecto propone aplicar técnicas de Aprendizaje Automático para estimar la producción mensual de gas convencional en provincias patagónicas productoras, manteniendo a Tierra del Fuego como caso principal de análisis.
 
@@ -34,11 +34,21 @@ Aplicar modelos de Aprendizaje Automático para estimar la producción mensual d
 
 El proyecto corresponde a un problema de **regresión**, ya que la variable objetivo es numérica y continua.
 
-La variable objetivo es:
+## La variable objetivo es:
 
 `cantidad_mm3`
 
 Esta columna representa la producción mensual de gas convencional medida en millones de metros cúbicos.
+
+## Variables predictoras:
+
+anio: año del registro.
+mes: mes del registro.
+provincia: provincia productora.
+produccion_mes_anterior: producción del mes anterior.
+produccion_dos_meses_antes: producción de dos meses antes.
+promedio_3_meses: promedio de producción de los tres meses anteriores.
+variacion_mes_anterior: diferencia entre el mes anterior y dos meses antes.
 
 ---
 
@@ -153,9 +163,20 @@ parcial_producciongas/
 ```
 
 ---
+## Modelos utilizados:
+Regresión lineal
+Fue el modelo principal. Se usó porque el problema es de regresión, ya que se busca estimar un valor numérico: la producción mensual de gas convencional.
+Árbol de decisión para regresión
+Se usó como modelo de comparación, para evaluar si obtenía mejores o peores resultados que la regresión lineal.
+
+## métricas de evaluación utilizadas:
+
+MAE: Error absoluto medio. Mide cuánto se equivoca el modelo en promedio.
+RMSE: Raíz del error cuadrático medio. También mide error, pero penaliza más los errores grandes.
+R2: Se lee “erre cuadrado”. Indica qué parte de la variación de los datos logra explicar el modelo.
+---
 
 ## Herramientas utilizadas
-
 * Python
 * Google Colab
 * pandas
