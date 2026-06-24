@@ -23,6 +23,14 @@ CSV
 Fecha de adquisición
 3 de junio de 2026
 
+Relevancia del problema
+
+El problema se enmarca en el análisis de la producción mensual de gas convencional en Tierra del Fuego y otras provincias patagónicas productoras. La producción de gas es un dato relevante porque forma parte de la matriz energética nacional y permite observar la evolución de una actividad estratégica para la región. En este contexto, estimar la producción mensual a partir de datos históricos puede aportar una primera aproximación para identificar tendencias, comparar comportamientos entre provincias y anticipar posibles variaciones. Por eso, el problema resulta adecuado para aplicar técnicas de Aprendizaje Automático, especialmente modelos de regresión, ya que el objetivo es predecir un valor numérico continuo, es decir la cantidad mensual de gas producido.
+
+## Objetivo general
+
+Desarrollar un modelo de Aprendizaje Automático que permita estimar la producción mensual de gas convencional en Tierra del Fuego y provincias patagónicas a partir de datos históricos de producción.
+
 Descripción general del archivo original
 
 El archivo original contiene 7494 instancias y 6 columnas.
