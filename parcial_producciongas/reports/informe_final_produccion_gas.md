@@ -249,7 +249,7 @@ El preprocesamiento realizado sobre los datos incluyó los siguientes pasos:
 
 ### Tipo de problema asociado al dataset
 
-El trabajo se plantea como un problema de regresión supervisada, porque la variable objetivo es numérica.
+El trabajo se plantea como un problema de regresión, porque la variable objetivo es numérica.
 
 El modelo buscará estimar la producción mensual de gas convencional, medida en millones de metros cúbicos. No se trata de un problema de clasificación, ya que no se busca asignar categorías, sino predecir un valor continuo.
 
@@ -257,7 +257,7 @@ El modelo buscará estimar la producción mensual de gas convencional, medida en
 
 En esta segunda entrega se logró identificar, descargar y describir el dataset que será utilizado en el proyecto de Aprendizaje Automático.
 
-El conjunto de datos seleccionado proviene de una fuente pública y oficial, cuenta con información histórica suficiente y permite construir un problema de regresión supervisada vinculado con la producción mensual de gas convencional en Tierra del Fuego y provincias patagónicas.
+El conjunto de datos seleccionado proviene de una fuente pública y oficial, cuenta con información histórica suficiente y permite construir un problema de regresión vinculado con la producción mensual de gas convencional en Tierra del Fuego y provincias patagónicas.
 
 A partir del dataset original se realizó un recorte y un preprocesamiento inicial para obtener un conjunto de datos adecuado para la etapa posterior de modelado.
 
