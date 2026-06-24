@@ -32,7 +32,7 @@ La pregunta orientadora del proyecto es:
 
 ### Tipo de problema
 
-El proyecto se plantea como un problema de **regresión supervisada**, porque la variable objetivo es numérica.
+El proyecto se plantea como un problema de **regresión**, porque la variable objetivo es numérica.
 
 El valor que se buscará estimar será la producción mensual de gas convencional, medida en millones de metros cúbicos.
 
